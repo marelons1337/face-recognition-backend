@@ -22,6 +22,7 @@ const saltRounds = 10;
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => { res.send('YAY!') })
 
 app.post('/signin', (req, res) => { signin.signInHandler(req, res, bcrypt, db) })
 
