@@ -18,7 +18,8 @@ const registerHandler = (req, res, db, bcrypt, saltRounds) => {
                     .insert({
                         name: name,
                         email: loginEmail[0],
-                        joined: new Date()
+                        joined: new Date(),
+                        entries: 0
                     })
                     .then(user => res.json(user[0]))
                     
